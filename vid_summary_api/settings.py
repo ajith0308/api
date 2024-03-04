@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "vid_summary_api.wsgi.application"
+WSGI_APPLICATION = "summary_api.wsgi.application"
 
 
 # Database
