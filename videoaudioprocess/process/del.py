@@ -1,7 +1,13 @@
 import os
 
 
-def delete_matching_files(folder_path, prefix="thumb", suffix=".jpg"):
+def delete_matching_files(prefix="thumb", suffix=".jpg"):
+    current_directory = os.path.dirname(__file__)
+    file_path = os.path.join(current_directory)
+    folder_path = os.path.abspath(
+        os.path.join(os.path.abspath(os.path.join(file_path, os.pardir)), os.pardir)
+    )
+    print("folder_path", folder_path)
     for filename in os.listdir(folder_path):
         if filename.startswith(prefix) and filename.endswith(suffix):
             file_path = os.path.join(folder_path, filename)
@@ -16,5 +22,5 @@ def delete_matching_files(folder_path, prefix="thumb", suffix=".jpg"):
 
 
 # Example usage
-folder_to_search = "C:/Users/ACS/Desktop/ecom/vid_summary_api/vid_summary_api"  # Replace with your actual folder path
-delete_matching_files(folder_to_search)
+if __name__ == "__main__":
+    delete_matching_files()
