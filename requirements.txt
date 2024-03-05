@@ -6,4 +6,4 @@ moviepy
 sumy
 nltk
 youtube_transcript_api
-gunicon 
+gunicorn
