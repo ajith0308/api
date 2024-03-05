@@ -1,4 +1,5 @@
 django
+djangorestframework
 pyttsx3
 pytube
 opencv-python
